@@ -1,14 +1,6 @@
 /*
  Definition for singly-linked list.
- 1. create map
- 2. iterate linked list
- if !map.contains(node) -> put
- else return true
- */
-import java.lang.*;
-import java.util.HashMap;
-
-class ListNode {
+ class ListNode {
     int val;
     ListNode next;
     ListNode(int x) {
@@ -16,6 +8,13 @@ class ListNode {
          next = null;
     }
  }
+ 1. create map
+ 2. iterate linked list
+ if !map.contains(node) -> put
+ else return true
+ */
+import java.lang.*;
+import java.util.HashMap;
 
 public class Linked_List_Cycle_141 {
     public boolean hasCycle(ListNode head) {
