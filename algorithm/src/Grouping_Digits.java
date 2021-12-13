@@ -31,13 +31,11 @@ public class Grouping_Digits {
                 }
             }
             //Min moves we need if we want to move all '1's before all '0's.
-            for (int i = 0; i <arr.size(); i++) {
+            for (int i = 0; i < arr.size(); i++) {
                 if (arr.get(i) == 1) {
                     minMovesForOne += i - targetOneIndex++;
                 }
             }
             return Math.min(minMovesForOne, minMovesForZero);
         }
-
-    public class Solution {
 }

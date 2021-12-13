@@ -23,6 +23,7 @@ public class Caesar_Cipher {
 
     public static void main(String[] args) {
 //        AmazonCipher sol = new AmazonCipher();
+        Caesar_Cipher sol = new Caesar_Cipher();
         String str = "VTAOG";
         int k = 2;
         System.out.println(sol.simpleCipher(str, k));
