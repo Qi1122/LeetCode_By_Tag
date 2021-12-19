@@ -1,6 +1,11 @@
 /*
 https://leetcode.com/problems/max-area-of-island/
 bfs only do bfs, update area in function
+
+the comment way was not correct, because maxArea is primitive, bfs pass the copy of maxArea
+maxArea will change inside bfs function, but the original maxArea will be the same
+
+fix: int[] maxArea = new int[1]; then pass it in bfs
  */
 
 import java.util.*;
@@ -17,6 +22,7 @@ public class Max_Area_Island_695 {
             for (int j = 0; j < cols; j++) {
                 if (grid[i][j] == 1 && !visited[i][j]) {
                     maxArea = Math.max(bfs(grid, i, j, visited, maxArea), maxArea);
+                    //bfs(grid, i, j, visited, maxArea);
                 }
             }
         }
@@ -42,5 +48,6 @@ public class Max_Area_Island_695 {
             }
         }
         return area;
+        //return Math.max(area, maxArea);
     }
 }
