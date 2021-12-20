@@ -4,7 +4,7 @@ https://leetcode.com/problems/rotting-oranges/
 note: update all nei for 1 min
 2. scan grid again -> cell == 1 -> return -1
 */
-import java.util.*:
+import java.util.*;
 
 public class Rotting_Oranges_994 {
 
