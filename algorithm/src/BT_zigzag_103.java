@@ -45,4 +45,36 @@ public class BT_zigzag_103 {
         }
         return level;
     }
+
+    public List<List<Integer>> zigzagLevelOrder_combine(TreeNode root) {
+        if (root == null) return new ArrayList<List<Integer>>();
+        List<List<Integer>> res = new ArrayList<>();
+        int levelNumber = 0;
+        Deque<TreeNode> q = new ArrayDeque<>();
+        q.offer(root);
+        while (!q.isEmpty()) {
+            int size = q.size();
+            List<Integer> level = new ArrayList<>();
+            for (int i = 0; i < size; i++) {
+                TreeNode cur = q.poll();
+                level.add(cur.val);
+                if (cur.left != null) q.offer(cur.left);
+                if (cur.right != null) q.offer(cur.right);
+            }
+            if (levelNumber % 2 == 0) res.add(level);
+            else res.add(reverseLevel(level));
+            levelNumber++;
+        }
+        return res;
+    }
+
+    private List<Integer> reverseLevel(List<Integer> level) {
+        int size = level.size();
+        for (int i = 0; i < size / 2; i++) {
+            Integer temp = level.get(i);
+            level.set(i, level.get(size- 1 - i));
+            level.set(size - 1 - i, temp);
+        }
+        return level;
+    }
 }
