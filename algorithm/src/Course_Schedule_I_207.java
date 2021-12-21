@@ -50,6 +50,8 @@ public class Course_Schedule_I_207 {
             int cur = q.poll();
             count++;
             for (int nei : graph.get(cur)) {
+                //cur is key in map, graph.get(cur) : get value(end class) -> list of connected nodes
+                //q.poll() -> finish class -> can go to next course
                 indegree[nei]--;
                 if (indegree[nei] == 0) q.offer(nei);
             }
