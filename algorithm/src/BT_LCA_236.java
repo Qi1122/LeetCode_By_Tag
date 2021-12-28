@@ -15,6 +15,7 @@ public class BT_LCA_236 {
         TreeNode left = lowestCommonAncestor(root.left, p, q);
         TreeNode right = lowestCommonAncestor(root.right, p, q);
         if (left != null && right != null) return root;
+        //right == null, can't find in right, only in left
         if (left != null) return left;
         if (right != null) return right;
         return null;

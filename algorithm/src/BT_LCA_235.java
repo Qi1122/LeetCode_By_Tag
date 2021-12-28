@@ -1,5 +1,13 @@
 /*
 https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/
+
+while loop vs recursion
+recursion:
+    use the same to recursively look for left/right subtree
+    lca is a root a subtree
+while loop:
+    iterate the tree, move current root
+    some current root is lca
  */
 
 public class BT_LCA_235 {

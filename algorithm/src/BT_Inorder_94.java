@@ -1,5 +1,18 @@
 /*
 https://leetcode.com/problems/binary-tree-inorder-traversal/
+
+inorder: left -> root -> right
+1. use findLeft to find the left most node
+put them in stack by order, in this way, will pop by left first
+2. regular stack iteration, for current node, left node has being processed
+need to consider right sub tree now -> findLeft(root.right)
+3. need to use WHILE loop in findLeft, in order to find ALL left nodes
+findLeft(){
+    while (root != null) {
+        stack.push(root);
+        root = root.left;
+    }
+}
  */
 import java.util.*;
 public class BT_Inorder_94 {
