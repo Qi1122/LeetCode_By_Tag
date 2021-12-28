@@ -1,7 +1,8 @@
 /*
 https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/
  */
-public class LCA_235 {
+
+public class BT_LCA_235 {
     //use recursion
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
         int parentVal = root.val;
