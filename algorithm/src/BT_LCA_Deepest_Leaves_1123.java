@@ -34,6 +34,7 @@ public class BT_LCA_Deepest_Leaves_1123 {
     private void findLeaves(TreeNode root, int curDepth, Set<TreeNode> set) {
         if (root == null) return;
         // X: int curDepth = treeDepth(root);
+        // this will return current node to deepest leaf height, not from current to up
         // System.out.print(curDepth);
         if (curDepth == depth) set.add(root);
         findLeaves(root.left, curDepth + 1, set);
