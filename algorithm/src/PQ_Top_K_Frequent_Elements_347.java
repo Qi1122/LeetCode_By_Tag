@@ -23,6 +23,7 @@ public class PQ_Top_K_Frequent_Elements_347 {
                 return o1[1] - o2[1];
             }
         });
+        //entry -> get key, value pair
         for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
             //add to pq
             pq.offer(new int[]{entry.getKey(), entry.getValue()});
