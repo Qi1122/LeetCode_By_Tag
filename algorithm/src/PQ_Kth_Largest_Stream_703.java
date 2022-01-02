@@ -1,30 +1,45 @@
 /*
 https://leetcode.com/problems/kth-largest-element-in-a-stream/
 
+    if PriorityQueue<Integer/String> -> 默认 minHeap
+    if maxHeap， use ：
+    private PriorityQueue<Integer> pq = new PriorityQueue<>(Collections.reverseOrder());
+
+    pq.size = k, minheap
+    do we need to initialize pq in construtor?
+
+    -> depends on giving example, in this case, input can be:
+    nums = null
+    nums.size < k
+    nums.size > k
+
+    too many cases if we do if-else in add
+
+    add simply need to handle the case of adding a value in pq
+
+    -> handle initialize in pq
+
+    constructor HAS NO RETURN!!!!
+    constructor initial member -> //initial pq with nums
+
  */
 import java.util.*;
 
 public class PQ_Kth_Largest_Stream_703 {
     private int k;
     private int[] nums;
-    //if PriorityQueue<Integer/String> -> 默认 minHeap
-    //if maxHeap， use ：
-    //private PriorityQueue<Integer> pq = new PriorityQueue<>(Collections.reverseOrder());
-    private PriorityQueue<Integer> pq = new PriorityQueue<>();
+    private PriorityQueue<Integer> pq;
 
-    //construtor HAS NO RETURN
-    //constructor intinial member
     public PQ_Kth_Largest_Stream_703(int k, int[] nums) {
         this.k = k;
         this.nums = nums;
-        //initial pq with nums
+        pq = new PriorityQueue<>();
         for(int num : nums) {
             maintainPQ(num);
         }
     }
 
     public int add(int val) {
-        //update pq when val >
         maintainPQ(val);
         return pq.peek();
     }
