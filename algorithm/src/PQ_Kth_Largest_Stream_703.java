@@ -33,7 +33,7 @@ public class PQ_Kth_Largest_Stream_703 {
     public PQ_Kth_Largest_Stream_703(int k, int[] nums) {
         this.k = k;
         this.nums = nums;
-        pq = new PriorityQueue<>();
+        this.pq = new PriorityQueue<>();
         for(int num : nums) {
             maintainPQ(num);
         }
