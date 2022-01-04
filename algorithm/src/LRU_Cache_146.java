@@ -69,7 +69,7 @@ public class LRU_Cache_146 {
 
         public int get(int key) {
             if (map.containsKey(key)) {
-                DoubeLinkedList node = map.get(key);
+                DoubleLinkedList node = map.get(key);
                 removeNode(node);
                 addNode(node);
                 return node.val;
@@ -83,7 +83,7 @@ public class LRU_Cache_146 {
             } else if (map.size() == capacity) {
                 removeNode(tail.prev);
             }
-            addNode(new DoubeLinkedList(key, value));
+            addNode(new DoubleLinkedList(key, value));
         }
     }
 }
