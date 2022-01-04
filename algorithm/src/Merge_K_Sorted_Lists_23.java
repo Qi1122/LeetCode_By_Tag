@@ -17,6 +17,11 @@ actual data is:
 2.use "next" to move:
   only need to maintain pq with offer "next node" to pq
 
+  easy mistake:
+
+  head.next = cur;
+  head = cur;
+
 
 Time complexity: O(n * log(list.length))
 
@@ -32,18 +37,14 @@ import java.util.*;
 public class Merge_K_Sorted_Lists_23 {
     public ListNode mergeKLists(ListNode[] lists) {
         PriorityQueue<ListNode> pq = new PriorityQueue<>((o1, o2) -> o1.val - o2.val);
+        for (int i = 0; i < lists.length; i++) {
+            if (lists[i] != null) pq.offer(lists[i]);
+        }
         ListNode dummy = new ListNode(0);
         ListNode head = dummy;
-        for (int i = 0; i < lists.length; i++) {
-            if (lists[i] != null) {
-                pq.offer(lists[i]);
-            }
-        }
         while (!pq.isEmpty()) {
             ListNode cur = pq.poll();
-            if (cur.next != null) {
-                pq.offer(cur.next);
-            }
+            if (cur.next != null) pq.offer(cur.next);
             head.next = cur;
             head = cur;
         }
