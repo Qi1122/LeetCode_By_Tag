@@ -1,4 +1,9 @@
-class AutocompleteSystem {
+/*
+https://leetcode.com/problems/design-search-autocomplete-system/
+ */
+import java.util.*;
+
+class Design_Search_Auto_Sys_642 {
 
     class TrieNode {
         private TrieNode[] children;
@@ -14,7 +19,7 @@ class AutocompleteSystem {
     private String buffer;
     private static final int TOP = 3;
 
-    public AutocompleteSystem(String[] sentences, int[] times) {
+    public Design_Search_Auto_Sys_642(String[] sentences, int[] times) {
         this.root = new TrieNode();
         for (int i = 0; i<sentences.length; i++) insert(sentences[i], times[i]);
         buffer = "";
