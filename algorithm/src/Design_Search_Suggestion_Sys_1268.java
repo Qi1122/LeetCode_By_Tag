@@ -7,7 +7,7 @@ public class Design_Search_Suggestion_Sys_1268 {
     class TrieNode {
         TrieNode[] children;
         List<String> words;
-        TrieNode() {
+        public TrieNode() {
             this.children = new TrieNode[26];
             this.words = new ArrayList<>();
         }

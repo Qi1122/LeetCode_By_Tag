@@ -26,4 +26,13 @@ public class BT_LCA_IV_1676 {
         if (right != null) return right;
         return null;
     }
+
+    public class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
+        public TreeNode(int val) {
+            this.val = val;
+        }
+    }
 }

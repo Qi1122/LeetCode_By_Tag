@@ -9,8 +9,15 @@ while loop:
     iterate the tree, move current root
     some current root is lca
  */
-
+package algorithm.src;
 public class BT_LCA_235 {
+    //self recursion
+    public TreeNode recursion(TreeNode root, TreeNode p, TreeNode q) {
+        if (p.val < root.val && q.val > root.val) return root;
+        if (p.val < root.val && q.val < root.val) return lowestCommonAncestor(root.left, p, q);
+        if (p.val > root.val && q.val > root.val) return lowestCommonAncestor(root.right, p, q);
+        return root;
+    }
     //use recursion
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
         int parentVal = root.val;
@@ -35,5 +42,14 @@ public class BT_LCA_235 {
             else return cur;
         }
         return cur;
+    }
+
+    public class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
+        public TreeNode(int val) {
+            this.val = val;
+        }
     }
 }

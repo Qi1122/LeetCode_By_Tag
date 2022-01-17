@@ -1,6 +1,17 @@
 /*
 https://leetcode.com/problems/design-search-autocomplete-system/
+
+PQ can also be: lambda is easier
+PriorityQueue<Map.Entry<String, Integer>> pq =
+    new PriorityQueue<>(new Comparator<Map.Entry<String, Integer>>() {
+    @Override
+    public int compare(Map.Entry<String, Integer> a, Map.Entry<String, Integer> b) {
+        return (a.getValue() == b.getValue() ? a.getKey().compareTo(b.getKey()) :
+               b.getValue() - a.getValue());
+    }
+});
  */
+package algorithm.src;
 import java.util.*;
 
 class Design_Search_Auto_Sys_642 {
