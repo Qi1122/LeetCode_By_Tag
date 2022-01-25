@@ -68,7 +68,7 @@ public class BT_zigzag_103 {
         return res;
     }
 
-    private List<Integer> reverseLevel(List<Integer> level) {
+    private List<Integer> reverseLevel2(List<Integer> level) {
         int size = level.size();
         for (int i = 0; i < size / 2; i++) {
             Integer temp = level.get(i);
@@ -76,5 +76,11 @@ public class BT_zigzag_103 {
             level.set(size - 1 - i, temp);
         }
         return level;
+    }
+
+    public class TreeNode {
+        int val;
+        TreeNode left, right;
+        public TreeNode (int val) {this.val = val;}
     }
 }
