@@ -1,4 +1,4 @@
-/*
+package algorithm.src;/*
 https://leetcode.com/problems/analyze-user-website-visit-pattern/
 
 总结：type，记得存什么，String immutable！
@@ -87,6 +87,8 @@ public class Analyze_User_Website_Visit_Pattern_1152 {
     private void findPatterns(HashMap<String, List<String>> map, HashMap<String, Integer> pattern) {
         for (Map.Entry<String, List<String>> entry : map.entrySet()) {
             Set<String> visited = new HashSet<>(); //must inside for loop
+            //pattern score: number of users that visited the same pattern
+            // -> same user visited a pattern multiple times will count as ONE score
             int size = entry.getValue().size();
             List<String> webs = entry.getValue();
             for (int i = 0; i < size - 2; i++) {
