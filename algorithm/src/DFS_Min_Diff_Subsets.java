@@ -10,7 +10,7 @@ import java.util.*;
 public class DFS_Min_Diff_Subsets {
     private List<List<Integer>> res = new ArrayList<>(2);
     private int min = Integer.MAX_VALUE;
-    private Set<List<Integer>> set = new HashSet<>();
+    //private Set<List<Integer>> set = new HashSet<>();
 
     public List<List<Integer>> findSubsets(List<Integer> list) {
         if (list == null || list.size() < 1) return res;
