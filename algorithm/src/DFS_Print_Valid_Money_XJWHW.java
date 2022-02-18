@@ -1,7 +1,7 @@
 /*
 A money print machine, it takes (int)d, and can print out d^2 % 400, or (d^2 + 1) % 400
 eg: given $5，it will print $25,$26, if given $257, it will print $49, $50.
-question: if we are able to print money k?
+question: if we are able to print target money?
  */
 package algorithm.src;
 import java.util.*;

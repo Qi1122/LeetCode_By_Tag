@@ -4,12 +4,13 @@ https://leetcode.com/problems/generate-parentheses/
 think of condition: when to add ( : used ( number < 3
                     when to add ) : used ) number < used ( number
 terminate condition: number of ( & ) == 3
+
 */
 package algorithm.src;
 import java.util.List;
 import java.util.ArrayList;
 
-public class DFS_Generate_Parenthese_22 {
+public class DFS_Generate_Parenthesis_22 {
     // 1. leetcode: generateParenthesis
     // 2. laioffer: validParenthesis(int k) -> line 44
     public List<String> generateParenthesis(int n) {
