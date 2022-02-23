@@ -3,6 +3,15 @@ https://leetcode.com/problems/design-a-stack-with-increment-operation/submission
 
 use increment array -> use an index cur to maintain the increment of [0, cur] -> arr[cur] = increment number
 
+Solution:
+Use two arrays to maintain operation
+def:
+int[] stack: maintain all the elements in stack
+int[] increment: from[0,index], all the elements need to be added with increment[index]
+int index:
+    for stack: position of top element in stack
+    increment[index]: value need to be added when pop()
+
 错误：
 1. index的定义
 (1)开始定义了index和increment index，两个变量造成逻辑混乱，pop()写起来及其复杂
@@ -27,7 +36,7 @@ test case中，pop()出所有元素之后，increment[]会继续增加，从而�
 1. 一定要明确物理意义：index的定义最终是：stack的顶端元素所在的位置 -> array的tail
 2. 正确的代码，一定是代码简洁、逻辑清晰的。逻辑不清晰，写出来一定不对。
 3. 如果统一操作可以省略判断 -> 统一操作 -> 判断越多，越容易出错
-4.
+
 */
 package algorithm.src;
 
@@ -52,9 +61,7 @@ public class API_Design_Stack_With_Increment {
         if (index == -1) return -1;
         if (index > 0) increment[index - 1] += increment[index]; //make value index - 1 of index value
         int popEle = increment[index] + stack[index];//return value
-        increment[index] = 0; //MUST setto zero
-        //increment[index]定义：[0,index]所有元素都+val
-        // pop()之后，只有[0, index - 1]所有元素+val，如果不还原，违背了increment[index]的物理意义
+        increment[index] = 0; //MUST set to zero
         //stack[index--] = 0;
         index--;
         return popEle;
