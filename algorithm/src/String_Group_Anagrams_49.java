@@ -1,5 +1,11 @@
-/*
+package algorithm.src;/*
 https://leetcode.com/problems/group-anagrams/
+
+1. create hashmap : key -> sorted anagram, value -> list of words has the same anagram
+2. how to sort anagram:
+    -> char[] c = string.toCharArray() //convert to char[]
+    -> Arrays.sort(c)
+    -> str = String.valueOf(c) // convert to String again
 
 findAna return Key -> 找代表
 

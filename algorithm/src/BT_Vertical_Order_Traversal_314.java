@@ -1,4 +1,4 @@
-/*
+package algorithm.src;/*
 https://leetcode.com/problems/binary-tree-vertical-order-traversal/
 物理意义，物理意义，物理意义！！！
 1. Use hashmap to keep index: root -> 0
@@ -9,6 +9,7 @@ https://leetcode.com/problems/binary-tree-vertical-order-traversal/
         position.put(root, 0);
 4. do BFS
 */
+
 import java.util.*;
 
 public class BT_Vertical_Order_Traversal_314 {
@@ -37,5 +38,14 @@ public class BT_Vertical_Order_Traversal_314 {
         }
         while (map.containsKey(leftMostIndex)) res.add(map.get(leftMostIndex++));
         return res;
+    }
+
+    private class TreeNode {
+        private int val;
+        private TreeNode left, right;
+
+        public TreeNode(int val) {
+            this.val = val;
+        }
     }
 }
