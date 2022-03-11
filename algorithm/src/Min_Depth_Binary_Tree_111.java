@@ -15,7 +15,7 @@ public class TreeNode {
 }
 
  */
-
+package algorithm.src;
 
 public class Min_Depth_Binary_Tree_111 {
 

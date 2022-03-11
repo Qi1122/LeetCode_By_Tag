@@ -2,6 +2,7 @@
 https://leetcode.com/problems/find-distance-in-a-binary-tree/
 
  */
+package algorithm.src;
 public class BT_Find_DIstance_1740 {
     public int findDistance(TreeNode root, int p, int q) {
         int res = 0;

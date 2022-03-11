@@ -4,6 +4,7 @@ int[] {max ascending from left and right,
        max descending from left and right};
 
  */
+package algorithm.src;
 public class BT_Longest_Consecutive_Sequence_II_549 {
     private int count = 0;
     public int longestConsecutive(TreeNode root) {

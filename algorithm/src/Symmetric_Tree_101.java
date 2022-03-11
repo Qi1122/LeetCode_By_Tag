@@ -1,6 +1,7 @@
 /*
 https://leetcode.com/problems/symmetric-tree/
  */
+package algorithm.src;
 public class Symmetric_Tree_101 {
     public boolean isSymmetric(TreeNode root) {
         if (root == null) {

@@ -3,6 +3,7 @@
 https://leetcode.com/problems/insert-into-a-binary-search-tree/
 
 */
+package algorithm.src;
 public class Insert_BST_701 {
     public TreeNode insertIntoBST(TreeNode root, int val) {
         if (root == null) {

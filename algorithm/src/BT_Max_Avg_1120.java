@@ -1,3 +1,5 @@
+package algorithm.src;
+
 /*
 https://leetcode.com/problems/maximum-average-subtree/
 recursion think:

@@ -4,6 +4,7 @@ https://leetcode.com/problems/binary-tree-paths/
 1. String操作
 2. 返回一直搞错
  */
+package algorithm.src;
 import java.util.*;
 
 public class BT_Paths_257 {

@@ -1,7 +1,7 @@
 /*
 https://leetcode.com/problems/minimum-depth-of-binary-tree/
  */
-
+package algorithm.src;
 public class BT_Min_Depth_111 {
     public int minDepth(TreeNode root) {
         if (root == null) return 0;

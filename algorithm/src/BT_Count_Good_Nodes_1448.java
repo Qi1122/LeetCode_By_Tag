@@ -2,6 +2,7 @@
 https://leetcode.com/problems/count-good-nodes-in-binary-tree/
 
  */
+package algorithm.src;
 public class BT_Count_Good_Nodes_1448 {
     private int count = 0;
     public int goodNodes(TreeNode root) {

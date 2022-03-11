@@ -1,6 +1,7 @@
 /*
 https://leetcode.com/problems/binary-tree-right-side-view/
  */
+package algorithm.src;
 import java.util.*;
 
 public class BT_Right_Side_View_199 {

@@ -2,6 +2,7 @@
 https://leetcode.com/problems/invert-binary-tree/submissions/
 
  */
+package algorithm.src;
 public class Invert_Binary_Tree_226 {
     public TreeNode invertTree(TreeNode root) {
         if (root == null) {
