@@ -18,9 +18,12 @@ public class BT_LCA_Deepest_Leaves_1123 {
     private int depth = 0;
     public TreeNode lcaDeepestLeavesBasicSolution(TreeNode root) {
         Set<TreeNode> set = new HashSet<>();
-        depth = treeDepth(root);
-        //System.out.print(depth);
-        findLeaves(root, 1, set); // if "0", current tree depth will be 3 instead of 4
+        depth = treeDepth(root) - 1; //when we calculate depth, depth of root = 1, however, requirement says root depth is 0
+        findLeaves(root, 0, set);
+        /** or:
+         * depth = treeDepth(root);
+         * findLeaves(root, 1, set); // if "0", current tree depth will be 3 instead of 4
+         */
         //for (TreeNode node : set)  System.out.println(node.val);
         return LCA(root, set);
     }

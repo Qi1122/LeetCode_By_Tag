@@ -1,4 +1,4 @@
-/*
+package algorithm.src;/*
 https://leetcode.com/problems/insert-interval/
  */
 import java.lang.*;

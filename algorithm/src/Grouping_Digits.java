@@ -1,14 +1,7 @@
-import java.io.*;
-import java.math.*;
-import java.security.*;
-import java.text.*;
+package algorithm.src;
+
 import java.util.*;
-import java.util.concurrent.*;
-import java.util.function.*;
-import java.util.regex.*;
-import java.util.stream.*;
-import static java.util.stream.Collectors.joining;
-import static java.util.stream.Collectors.toList;
+
 
 public class Grouping_Digits {
         /*

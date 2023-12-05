@@ -4,7 +4,6 @@ Given an array of integers:
 2) the sum of each part must be equal, or sum(part1) - sum(part2) is minimum
  */
 package algorithm.src;
-import java.sql.SQLOutput;
 import java.util.*;
 
 public class DFS_Min_Diff_Subsets {

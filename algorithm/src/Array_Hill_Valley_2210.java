@@ -11,6 +11,7 @@ public class Array_Hill_Valley_2210 {
             if ((prev < nums[i] && nums[i] > nums[i + 1])||(prev > nums[i] && nums[i] < nums[i + 1])) {
                 ans++;
             }
+            //if has two same value, prev not move
             if (nums[i] != nums[i + 1]) prev = nums[i];
         }
         return ans;

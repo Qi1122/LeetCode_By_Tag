@@ -4,7 +4,6 @@ eg: S = {a, b, c, d} k = 2
 output: {a,b} {a, c}, {a,d}, {b, c}, {b, d}, {c, d}
  */
 package algorithm.src;
-import java.sql.SQLOutput;
 import java.util.*;
 
 public class DFS_Subset_Size_K {

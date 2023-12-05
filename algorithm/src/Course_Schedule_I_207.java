@@ -1,4 +1,4 @@
-/*
+package algorithm.src;/*
 https://leetcode.com/problems/course-schedule/
 
 -- graph: construct a graph from giving inputs, graph构建的是点边的关系，key -> 点，value -> 相邻的所有点

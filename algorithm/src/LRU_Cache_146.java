@@ -1,4 +1,4 @@
-/*
+package algorithm.src;/*
 https://leetcode.com/problems/lru-cache/
 
 memory (eg: 1G) -> load data to memory,

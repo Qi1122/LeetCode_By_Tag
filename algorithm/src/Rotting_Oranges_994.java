@@ -1,4 +1,4 @@
-/*
+package algorithm.src;/*
 https://leetcode.com/problems/rotting-oranges/
 1. scan grid, if cell == 2 -> bfs -> update minutes
 note: update all nei for 1 min

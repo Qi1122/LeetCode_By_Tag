@@ -1,4 +1,4 @@
-/*
+package algorithm.src;/*
 link: https://leetcode.com/problems/meeting-rooms-ii/
 1. create a list to store result
    create int count/result to store result

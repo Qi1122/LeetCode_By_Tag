@@ -1,4 +1,4 @@
-/*
+package algorithm.src;/*
 https://leetcode.com/problems/trapping-rain-water/
 1. two pointers -> find highest point
    trap water = current max height - current height

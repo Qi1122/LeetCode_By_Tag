@@ -1,3 +1,5 @@
+package algorithm.src;
+
 /*
  1. set dummy node and curr to track current moving node
  2. put current smallest node in new linked list

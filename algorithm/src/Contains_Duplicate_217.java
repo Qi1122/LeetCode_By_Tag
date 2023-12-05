@@ -1,4 +1,4 @@
-/*
+package algorithm.src;/*
 https://leetcode.com/problems/contains-duplicate/
  */
 import java.util.*;
